@@ -2,7 +2,8 @@
 <h2>Your Cart</h2>
 <ul>
   <% for item in @cart.line_items %>
-      <li><%= item.product.name %></li>
+      <li><%= item.quantity %> &times;
+      <%= item.product.name %></li>
   <% end %>
 </ul>
 

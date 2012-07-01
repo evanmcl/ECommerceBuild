@@ -1,4 +1,4 @@
-require 'digest'
+require 'Digest'
 class User < ActiveRecord::Base
   has_many :products
 
@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   end
 
   def encrypt(string)
-    digest::SHA1.hexdigest(string)
+    Digest::SHA1.hexdigest(string)
   end
 
 end
