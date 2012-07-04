@@ -1,4 +1,8 @@
 OnlineMarket::Application.routes.draw do
+
+
+  get "suppliers/new"
+
   resources :line_items
 
   resources :carts
@@ -9,14 +13,17 @@ OnlineMarket::Application.routes.draw do
   get "welcome/home"
   get "welcome/thank_you"
   get "welcome/register"
+  get "welcome/suppliers"
 
   resources :products
   resources :users
   resources :sessions
+  resources :suppliers
 
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
   match '/login' => "sessions#new", :as => "login"
   match '/logout' => "sessions#destroy", :as => "logout"
+  match '/suppliers' => "home#index", :as => "suppliers"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

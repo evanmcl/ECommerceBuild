@@ -2,6 +2,7 @@
 
   class Product < ActiveRecord::Base
     belongs_to :user
+    belongs_to :supplier
     has_many :line_items
 
     attr_accessible :name, :description, :price
