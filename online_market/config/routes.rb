@@ -5,6 +5,7 @@ OnlineMarket::Application.routes.draw do
 
   get "users/new"
 
+
   get "welcome/home"
   get "welcome/thank_you"
   get "welcome/register"
